@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		664AE2251EFD138500F89DE2 /* __PROJECT_NAME__Label.h in Headers */ = {isa = PBXBuildFile; fileRef = 664AE2231EFD138500F89DE2 /* __PROJECT_NAME__Label.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		664AE2261EFD138500F89DE2 /* __PROJECT_NAME__Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 664AE2241EFD138500F89DE2 /* __PROJECT_NAME__Label.m */; };
 		D93F1CA21EAEDB6E009A7474 /* __PROJECT_NAME__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93F1C981EAEDB6E009A7474 /* __PROJECT_NAME__.framework */; };
 		D93F1CA71EAEDB6E009A7474 /* __PROJECT_NAME__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F1CA61EAEDB6E009A7474 /* __PROJECT_NAME__Tests.swift */; };
 		D93F1CA91EAEDB6E009A7474 /* __PROJECT_NAME__.h in Headers */ = {isa = PBXBuildFile; fileRef = D93F1C9B1EAEDB6E009A7474 /* __PROJECT_NAME__.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,8 +25,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		664AE2231EFD138500F89DE2 /* __PROJECT_NAME__Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __PROJECT_NAME__Label.h; sourceTree = "<group>"; };
-		664AE2241EFD138500F89DE2 /* __PROJECT_NAME__Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __PROJECT_NAME__Label.m; sourceTree = "<group>"; };
 		D93F1C981EAEDB6E009A7474 /* __PROJECT_NAME__.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = __PROJECT_NAME__.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93F1C9B1EAEDB6E009A7474 /* __PROJECT_NAME__.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __PROJECT_NAME__.h; sourceTree = "<group>"; };
 		D93F1C9C1EAEDB6E009A7474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,8 +78,6 @@
 			children = (
 				D93F1CB21EAEDCC9009A7474 /* __PROJECT_NAME__.swift */,
 				D93F1C9B1EAEDB6E009A7474 /* __PROJECT_NAME__.h */,
-				664AE2231EFD138500F89DE2 /* __PROJECT_NAME__Label.h */,
-				664AE2241EFD138500F89DE2 /* __PROJECT_NAME__Label.m */,
 				D93F1C9C1EAEDB6E009A7474 /* Info.plist */,
 			);
 			path = Source;
@@ -113,7 +107,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				664AE2251EFD138500F89DE2 /* __PROJECT_NAME__Label.h in Headers */,
 				D93F1CA91EAEDB6E009A7474 /* __PROJECT_NAME__.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +139,7 @@
 				D93F1C9D1EAEDB6E009A7474 /* Sources */,
 				D93F1C9E1EAEDB6E009A7474 /* Frameworks */,
 				D93F1C9F1EAEDB6E009A7474 /* Resources */,
+				D942967721E4500400FD243D /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -214,13 +208,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D942967721E4500400FD243D /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D93F1C931EAEDB6E009A7474 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D93F1CB31EAEDCC9009A7474 /* __PROJECT_NAME__.swift in Sources */,
-				664AE2261EFD138500F89DE2 /* __PROJECT_NAME__Label.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +305,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -337,6 +352,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -361,7 +377,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -381,7 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.--PROJECT-NAME--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -394,7 +410,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.--PROJECT-NAME--Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -407,7 +423,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.--PROJECT-NAME--Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

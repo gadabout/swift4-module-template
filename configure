@@ -86,12 +86,12 @@ end
 
 substitutions = {
   '__PROJECT_NAME__' => 'MyProject',
-  '__ORGANIZATION NAME__' => 'Awesome Org',
-  'com.AN.ORGANIZATION.IDENTIFIER' => 'com.awesome',
-  '__AUTHOR NAME__' => 'Mr McAwesome',
+  '__ORGANIZATION NAME__' => 'Peek Travel Inc',
+  'com.AN.ORGANIZATION.IDENTIFIER' => 'com.peek.',
+  '__AUTHOR NAME__' => 'Tony Dam',
   '__TODAYS_DATE__' => Date.today.strftime(Env.date_format_string),
   '__TODAYS_YEAR__' => "#{Date.today.year}",
-  '__GITHUB_USERNAME__' => 'awesome_octocat'
+  '__GITHUB_USERNAME__' => 'gadabout'
 }
 substitutions.each do |variable, default|
   substitutions[variable] =
