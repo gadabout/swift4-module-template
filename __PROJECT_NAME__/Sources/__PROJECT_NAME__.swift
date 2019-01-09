@@ -24,7 +24,7 @@ public class __PROJECT_NAME__: UIView {
     self.translatesAutoresizingMaskIntoConstraints = false
 
     let bundle = Bundle(for: type(of: self))
-    let image = UIImage(named: "wk", in: bundle, compatibleWith: nil)
+    let image = UIImage(named: "peek", in: bundle, compatibleWith: nil)
     let imageView = UIImageView(image: image)
     imageView.translatesAutoresizingMaskIntoConstraints = false
     self.addSubview(imageView)

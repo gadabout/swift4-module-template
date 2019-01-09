@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D91E922021E5846B00C600E7 /* peek.png in Resources */ = {isa = PBXBuildFile; fileRef = D91E921F21E5846B00C600E7 /* peek.png */; };
 		D93F1CA21EAEDB6E009A7474 /* __PROJECT_NAME__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93F1C981EAEDB6E009A7474 /* __PROJECT_NAME__.framework */; };
 		D93F1CA71EAEDB6E009A7474 /* __PROJECT_NAME__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F1CA61EAEDB6E009A7474 /* __PROJECT_NAME__Tests.swift */; };
 		D93F1CA91EAEDB6E009A7474 /* __PROJECT_NAME__.h in Headers */ = {isa = PBXBuildFile; fileRef = D93F1C9B1EAEDB6E009A7474 /* __PROJECT_NAME__.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D93F1CB31EAEDCC9009A7474 /* __PROJECT_NAME__.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F1CB21EAEDCC9009A7474 /* __PROJECT_NAME__.swift */; };
-		D93F1CB61EAEDCF1009A7474 /* wk.png in Resources */ = {isa = PBXBuildFile; fileRef = D93F1CB51EAEDCF1009A7474 /* wk.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D91E921F21E5846B00C600E7 /* peek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = peek.png; path = Resources/peek.png; sourceTree = "<group>"; };
 		D93F1C981EAEDB6E009A7474 /* __PROJECT_NAME__.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = __PROJECT_NAME__.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93F1C9B1EAEDB6E009A7474 /* __PROJECT_NAME__.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __PROJECT_NAME__.h; sourceTree = "<group>"; };
 		D93F1C9C1EAEDB6E009A7474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,7 +33,6 @@
 		D93F1CA61EAEDB6E009A7474 /* __PROJECT_NAME__Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __PROJECT_NAME__Tests.swift; sourceTree = "<group>"; };
 		D93F1CA81EAEDB6E009A7474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D93F1CB21EAEDCC9009A7474 /* __PROJECT_NAME__.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = __PROJECT_NAME__.swift; sourceTree = "<group>"; };
-		D93F1CB51EAEDCF1009A7474 /* wk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wk.png; path = Resources/wk.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		D93F1C8E1EAEDB6E009A7474 = {
 			isa = PBXGroup;
 			children = (
-				D93F1C9A1EAEDB6E009A7474 /* Source */,
+				D93F1C9A1EAEDB6E009A7474 /* Sources */,
 				D93F1CB41EAEDCD8009A7474 /* Resources */,
 				D93F1CA51EAEDB6E009A7474 /* Tests */,
 				D93F1C991EAEDB6E009A7474 /* Products */,
@@ -73,14 +73,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D93F1C9A1EAEDB6E009A7474 /* Source */ = {
+		D93F1C9A1EAEDB6E009A7474 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				D93F1CB21EAEDCC9009A7474 /* __PROJECT_NAME__.swift */,
 				D93F1C9B1EAEDB6E009A7474 /* __PROJECT_NAME__.h */,
 				D93F1C9C1EAEDB6E009A7474 /* Info.plist */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		D93F1CA51EAEDB6E009A7474 /* Tests */ = {
@@ -95,7 +95,7 @@
 		D93F1CB41EAEDCD8009A7474 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D93F1CB51EAEDCF1009A7474 /* wk.png */,
+				D91E921F21E5846B00C600E7 /* peek.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D93F1CB61EAEDCF1009A7474 /* wk.png in Resources */,
+				D91E922021E5846B00C600E7 /* peek.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +370,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.--PROJECT-NAME--";
@@ -391,7 +391,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.--PROJECT-NAME--";

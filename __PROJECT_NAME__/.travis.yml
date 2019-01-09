@@ -4,10 +4,10 @@ env:
   global:
   - WORKSPACE='__PROJECT_NAME__.xcworkspace'
   - IOS_FRAMEWORK_SCHEME='__PROJECT_NAME__'
-  - IOS_SDK=iphonesimulator
-  - EXAMPLE_SCHEME='iOS Example'
+  - IOS_SDK=iphonesimulator12.1
+  - EXAMPLE_SCHEME='iOS-Example'
   matrix:
-   - DESTINATION='platform=iOS Simulator,name=iPhone X,OS=12.1' SCHEME=$IOS_FRAMEWORK_SCHEME      SDK='$IOS_SDK'      POD_LINT='NO'
+   - DESTINATION='platform=iOS Simulator,name=iPhone X,OS=12.1' SCHEME=$IOS_FRAMEWORK_SCHEME SDK=$IOS_SDK POD_LINT='NO'
 install:
   - ./install_swiftlint.sh
 script:
@@ -16,9 +16,9 @@ script:
 - xcodebuild -version
 - xcodebuild -showsdks
 - xcodebuild -list
-- xcodebuild -workspace "$WORKSPACE" -list
+- xcodebuild -workspace $WORKSPACE -list
 
-- xcodebuild -scheme $SCHEME -workspace $WORKSPACE -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.1' build test
+- xcodebuild -scheme $SCHEME -workspace $WORKSPACE -sdk $SDK -destination 'platform=iOS Simulator,name=iPhone X,OS=12.1' build test
 
 # Build and test Framework in Debug
 #- xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
@@ -30,7 +30,7 @@ script:
 #- xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty -c
 
 # Run `pod lib lint` if specified
-- if [ $POD_LINT == "YES" ]; then
+- if [ $POD_LINT == 'YES' ]; then
     pod lib lint --allow-warnings;
   fi
 
