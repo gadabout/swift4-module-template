@@ -1,18 +1,3 @@
-# WARNING
-
-Thank you for using __PROJECT_NAME__. Before you release your awesome project to the world, complete the following steps.
-
-THIS LIST IS EASY, CHECK IT OFF ONE-BY-ONE BABY!
-
- - [ ] Open the project in Xcode and add features to __PROJECT_NAME__
- - [ ] Make sure you are using Swift 4.2
- - [ ] Fix all build errors and warnings, add tests (yes really)
- - [ ] Add all details to your [Podspec](__PROJECT_NAME__.podspec)
- - [ ] Delete all this stuff up here
- - [ ] Make one release (full steps are in [CONTRIBUTING.md] in case you forget)
-
-----
-
 # __PROJECT_NAME__
 
 [![CI Status](https://travis-ci.com/__GITHUB_USERNAME__/__PROJECT_NAME__.svg?style=flat)](https://travis-ci.com/__GITHUB_USERNAME__/__PROJECT_NAME__)
@@ -32,6 +17,26 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 
 ## Installation
+
+### Carthage (Preferred)
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate __PROJECT_NAME__ into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "__GITHUB_USERNAME__/__PROJECT_NAME__" ~> 0.1
+```
+
+Run `carthage update` to build the framework and drag the built `__PROJECT_NAME__`.framework into your Xcode project.
+
 
 ### CocoaPods
 
@@ -57,24 +62,6 @@ $ pod install
 ```
 
 
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate __PROJECT_NAME__ into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "__GITHUB_USERNAME__/__PROJECT_NAME__" ~> 0.1
-```
-
-Run `carthage update` to build the framework and drag the built `__PROJECT_NAME__`.framework into your Xcode project.
 
 
 ## Author

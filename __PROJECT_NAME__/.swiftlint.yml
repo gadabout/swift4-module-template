@@ -12,6 +12,7 @@ included: # paths to include during linting. `--path` is ignored if present.
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
+  - Sources/GraphQLSchema
 analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
   - explicit_self
 
@@ -22,7 +23,7 @@ force_try:
   severity: warning # explicitly
 # rules that have both warning and error levels, can set just the warning level
 # implicitly
-line_length: 110
+line_length: 140
 # they can set both implicitly with an array
 type_body_length:
   - 300 # warning
@@ -36,12 +37,12 @@ file_length:
 type_name:
   min_length: 4 # only warning
   max_length: # warning and error
-    warning: 40
-    error: 50
+    warning: 60
+    error: 70
   excluded: iPhone # excluded via string
 identifier_name:
   min_length: # only min_length
-    error: 4 # only error
+    error: 3 # only error
   excluded: # excluded via string array
     - id
     - URL

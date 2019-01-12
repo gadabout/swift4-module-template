@@ -41,7 +41,7 @@
 		D93F1CB71EAEDD3F009A7474 = {
 			isa = PBXGroup;
 			children = (
-				D93F1CC21EAEDD3F009A7474 /* Source */,
+				D93F1CC21EAEDD3F009A7474 /* Sources */,
 				D93F1CC11EAEDD3F009A7474 /* Products */,
 				D93F1CD51EAEE00D009A7474 /* Frameworks */,
 			);
@@ -55,7 +55,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D93F1CC21EAEDD3F009A7474 /* Source */ = {
+		D93F1CC21EAEDD3F009A7474 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				D93F1CC31EAEDD3F009A7474 /* AppDelegate.swift */,
@@ -65,7 +65,7 @@
 				D93F1CCC1EAEDD3F009A7474 /* LaunchScreen.storyboard */,
 				D93F1CCF1EAEDD3F009A7474 /* Info.plist */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		D93F1CD51EAEE00D009A7474 /* Frameworks */ = {
@@ -275,7 +275,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,7 +288,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";

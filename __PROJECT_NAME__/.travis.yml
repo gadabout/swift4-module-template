@@ -1,5 +1,8 @@
 language: objective-c
 osx_image: xcode10.1
+cache:
+  directories:
+  - Carthage
 env:
   global:
   - WORKSPACE='__PROJECT_NAME__.xcworkspace'
@@ -8,6 +11,11 @@ env:
   - EXAMPLE_SCHEME='iOS-Example'
   matrix:
    - DESTINATION='platform=iOS Simulator,name=iPhone X,OS=12.1' SCHEME=$IOS_FRAMEWORK_SCHEME SDK=$IOS_SDK POD_LINT='NO'
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+  - carthage bootstrap --verbose --no-use-binaries --platform iOS --cache-builds
+  - gem install xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
 install:
   - ./install_swiftlint.sh
 script:
