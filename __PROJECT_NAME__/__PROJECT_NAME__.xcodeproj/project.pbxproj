@@ -11,7 +11,6 @@
 		D93F1CA21EAEDB6E009A7474 /* __PROJECT_NAME__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93F1C981EAEDB6E009A7474 /* __PROJECT_NAME__.framework */; };
 		D93F1CA71EAEDB6E009A7474 /* __PROJECT_NAME__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F1CA61EAEDB6E009A7474 /* __PROJECT_NAME__Tests.swift */; };
 		D93F1CA91EAEDB6E009A7474 /* __PROJECT_NAME__.h in Headers */ = {isa = PBXBuildFile; fileRef = D93F1C9B1EAEDB6E009A7474 /* __PROJECT_NAME__.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D93F1CB31EAEDCC9009A7474 /* __PROJECT_NAME__.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F1CB21EAEDCC9009A7474 /* __PROJECT_NAME__.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +31,6 @@
 		D93F1CA11EAEDB6E009A7474 /* __PROJECT_NAME__Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = __PROJECT_NAME__Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93F1CA61EAEDB6E009A7474 /* __PROJECT_NAME__Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __PROJECT_NAME__Tests.swift; sourceTree = "<group>"; };
 		D93F1CA81EAEDB6E009A7474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D93F1CB21EAEDCC9009A7474 /* __PROJECT_NAME__.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = __PROJECT_NAME__.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +74,6 @@
 		D93F1C9A1EAEDB6E009A7474 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D93F1CB21EAEDCC9009A7474 /* __PROJECT_NAME__.swift */,
 				D93F1C9B1EAEDB6E009A7474 /* __PROJECT_NAME__.h */,
 				D93F1C9C1EAEDB6E009A7474 /* Info.plist */,
 			);
@@ -122,6 +119,7 @@
 				D93F1C941EAEDB6E009A7474 /* Frameworks */,
 				D93F1C951EAEDB6E009A7474 /* Headers */,
 				D93F1C961EAEDB6E009A7474 /* Resources */,
+				D915B2C521F0506100C10068 /* Warnings */,
 			);
 			buildRules = (
 			);
@@ -209,6 +207,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		D915B2C521F0506100C10068 /* Warnings */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Warnings;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR::\"\nfind \"${SRCROOT}/Sources\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n";
+		};
 		D942967721E4500400FD243D /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D93F1CB31EAEDCC9009A7474 /* __PROJECT_NAME__.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +421,6 @@
 		D93F1CB01EAEDB6E009A7474 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -419,7 +433,6 @@
 		D93F1CB11EAEDB6E009A7474 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
