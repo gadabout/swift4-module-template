@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/fulldecent/swift4-module-template.svg?branch=master)](https://travis-ci.org/fulldecent/swift4-module-template)
 
+<img src="https://user-images.githubusercontent.com/970324/51696923-85769f80-1fbb-11e9-9fc6-5bdee23deb5c.jpg" width="200" height="200">
+
 # Swift 4 Module Template
 Use this template as a starting point for any Swift 4 module that you want other people to include in their projects.
 
