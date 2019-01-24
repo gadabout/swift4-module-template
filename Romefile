@@ -1,0 +1,3 @@
+cache: # required
+  local: ~/Library/Caches/Rome # optional
+                               # at least one between `local` and `s3Bucket` is required
